@@ -1,0 +1,1524 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 80px);
+    max-width: 1250px;
+    height: 64px;
+
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(10, 10, 10, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e50914;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links a {
+    color: #a7a7a7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-button {
+    color: #ffffff;
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    background: #e50914;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #ff1a26;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 8% 80px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(229, 9, 20, 0.12),
+            transparent 32%
+        ),
+        #050505;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: 20%;
+
+    background: rgba(229, 9, 20, 0.08);
+
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+}
+
+.hero-label {
+    margin-bottom: 24px;
+
+    color: #a7a7a7;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(70px, 12vw, 180px);
+
+    line-height: 0.82;
+
+    font-weight: 800;
+
+    letter-spacing: -6px;
+
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+}
+
+.hero-description {
+    max-width: 520px;
+
+    margin-top: 38px;
+
+    color: #a7a7a7;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 15px 24px;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #e50914;
+    color: #ffffff;
+    border: 1px solid #e50914;
+}
+
+.primary-btn:hover {
+    background: #ff1a26;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.secondary-btn:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+
+    transform: translateY(-3px);
+}
+
+.hero-scroll {
+    position: absolute;
+
+    bottom: 35px;
+    right: 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: #666666;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.scroll-line {
+    width: 55px;
+    height: 1px;
+
+    background: #555555;
+}
+
+
+/* =========================================================
+   GENERAL SECTION HEADING
+========================================================= */
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+
+    color: #a7a7a7;
+}
+
+.section-heading h2 {
+    font-size: clamp(40px, 5vw, 64px);
+
+    margin: 0;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio {
+    padding: 130px 8% 150px;
+    background: #050505;
+}
+
+.portfolio-grid {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   PORTFOLIO CARD
+========================================================= */
+
+.portfolio-card {
+    width: 100%;
+    min-width: 0;
+
+    transition: transform 0.35s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.portfolio-card video {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 9 / 16;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 16px;
+
+    background: #0b0b0b;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+
+    transition:
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.portfolio-card:hover video {
+    border-color: rgba(229, 9, 20, 0.4);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(229, 9, 20, 0.08);
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.portfolio-card h3 {
+    margin: 20px 0 7px;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+}
+
+.portfolio-card p {
+    margin: 0;
+
+    color: #858585;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .portfolio {
+        padding: 100px 6% 110px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 420px;
+
+        gap: 35px;
+    }
+
+    .portfolio-card h3 {
+        font-size: 18px;
+    }
+
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services {
+    padding: 140px 8%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #080808 100%
+        );
+}
+
+.services .section-heading {
+    max-width: 850px;
+    margin: 0 auto 70px;
+}
+
+.services .section-heading h2 {
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.services-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.service-card {
+    position: relative;
+
+    padding: 38px;
+
+    min-height: 250px;
+
+    background: #0b0b0b;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.service-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -80px;
+    bottom: -100px;
+
+    background: rgba(229, 9, 20, 0.12);
+
+    filter: blur(55px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(229, 9, 20, 0.35);
+
+    background: #0e0e0e;
+}
+
+.service-number {
+    display: block;
+
+    color: #e50914;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 45px;
+}
+
+.service-card h3 {
+    font-size: 28px;
+
+    margin-bottom: 14px;
+
+    letter-spacing: -1px;
+}
+
+.service-card p {
+    max-width: 500px;
+
+    color: #898989;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    padding: 150px 8%;
+
+    background: #080808;
+}
+
+.about-content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.about-content .section-heading {
+    margin-bottom: 0;
+}
+
+.about-content .section-heading h2 {
+    max-width: 600px;
+
+    font-size: clamp(48px, 7vw, 90px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+.about-text {
+    padding-top: 8px;
+}
+
+.about-text p {
+    max-width: 650px;
+
+    color: #999999;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 22px;
+}
+
+.about-text p:first-child {
+    color: #ffffff;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    position: relative;
+
+    padding: 160px 8% 110px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(229, 9, 20, 0.16),
+            transparent 35%
+        ),
+        #050505;
+}
+
+.contact::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -150px;
+    top: 10%;
+
+    background: rgba(229, 9, 20, 0.09);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.contact-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.contact-content .section-heading {
+    margin-bottom: 35px;
+}
+
+.contact-content .section-heading h2 {
+    max-width: 950px;
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+}
+
+.contact-description {
+    max-width: 600px;
+
+    color: #999999;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.contact-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.contact-buttons a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    padding: 15px 24px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    padding: 35px 8%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: #050505;
+
+    text-align: center;
+}
+
+.footer-logo {
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.footer-logo span {
+    color: #e50914;
+}
+
+.footer p {
+    color: #666666;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-bottom: 5px;
+}
+
+.footer-copy {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: calc(100% - 30px);
+        padding: 0 16px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 9px 14px;
+    }
+
+    .hero {
+        padding: 130px 6% 70px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 1.6;
+    }
+
+    .hero h1 {
+        font-size: clamp(60px, 18vw, 110px);
+        letter-spacing: -4px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .portfolio {
+        padding: 90px 6%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .services {
+        padding: 100px 6%;
+    }
+
+    .services .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .services .section-heading h2 {
+        letter-spacing: -3px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 220px;
+        padding: 28px;
+    }
+
+    .service-number {
+        margin-bottom: 35px;
+    }
+
+    .about {
+        padding: 100px 6%;
+    }
+
+    .about-content {
+        gap: 35px;
+    }
+
+    .about-content .section-heading h2 {
+        letter-spacing: -3px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-text p:first-child {
+        font-size: 18px;
+    }
+
+    .contact {
+        padding: 110px 6% 80px;
+    }
+
+    .contact-content .section-heading h2 {
+        letter-spacing: -3px;
+    }
+
+    .contact-description {
+        font-size: 15px;
+    }
+
+    .footer {
+        padding: 30px 6%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons a {
+        width: fit-content;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .service-card h3 {
+        font-size: 24px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.social-btn svg {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+}/* =========================================================
+   MOBILE HAMBURGER MENU
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 74px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px;
+
+        background: rgba(10, 10, 10, 0.95);
+
+        border: 1px solid rgba(255, 255, 255, 0.09);
+
+        border-radius: 14px;
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 14px 12px;
+
+        border-radius: 8px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+}/* =========================================================
+   SCROLL REVEAL ANIMATION
+========================================================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.scroll-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+}
+/* =========================================================
+   HERO PREMIUM POLISH
+========================================================= */
+
+/* Subtle animated red glow */
+.hero::before {
+    animation: heroGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translate(-40px, 25px) scale(1.12);
+        opacity: 1;
+    }
+
+}
+
+
+/* Hero heading subtle entrance */
+.hero h1 {
+    animation: heroTitle 1s ease-out both;
+}
+
+@keyframes heroTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Hero label */
+.hero-label {
+    animation: heroLabel 0.8s ease-out both;
+}
+
+@keyframes heroLabel {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Hero description */
+.hero-description {
+    animation: heroDescription 1s ease-out 0.15s both;
+}
+
+@keyframes heroDescription {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Hero buttons */
+.hero-buttons {
+    animation: heroButtons 1s ease-out 0.25s both;
+}
+
+@keyframes heroButtons {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Button hover glow */
+.primary-btn:hover {
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.25);
+}
+
+.secondary-btn:hover {
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.06);
+}
+
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .hero::before,
+    .hero h1,
+    .hero-label,
+    .hero-description,
+    .hero-buttons {
+        animation: none;
+    }
+
+}/* =========================================================
+   STRONGER HERO GLOW
+========================================================= */
+
+.hero::before {
+    animation: heroGlow 5s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes heroGlow {
+
+    0% {
+        transform: translate(0, 0) scale(0.9);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: translate(-70px, 30px) scale(1.15);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(-20px, 70px) scale(1.3);
+        opacity: 0.55;
+    }
+
+}/* =========================================================
+   PORTFOLIO PREMIUM POLISH
+========================================================= */
+
+/* Smooth card movement */
+.portfolio-card {
+    position: relative;
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+/* Video hover */
+.portfolio-card video {
+    transition:
+        transform 0.45s ease,
+        border-color 0.35s ease,
+        box-shadow 0.45s ease;
+}
+
+/* Lift card + slightly zoom video */
+.portfolio-card:hover {
+    transform: translateY(-8px);
+}
+
+.portfolio-card:hover video {
+    transform: scale(1.015);
+
+    border-color: rgba(229, 9, 20, 0.55);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(229, 9, 20, 0.10);
+}
+
+
+/* Portfolio title */
+.portfolio-card h3 {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.portfolio-card:hover h3 {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+
+/* Portfolio description */
+.portfolio-card p {
+    transition: color 0.3s ease;
+}
+
+.portfolio-card:hover p {
+    color: #a7a7a7;
+}
+
+
+/* Work section heading */
+.portfolio .section-heading h2 {
+    transition: transform 0.4s ease;
+}
+
+.portfolio .section-heading:hover h2 {
+    transform: translateX(4px);
+}
+
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .portfolio-card,
+    .portfolio-card video,
+    .portfolio-card h3,
+    .portfolio-card p,
+    .portfolio .section-heading h2 {
+        transition: none;
+        transform: none;
+    }
+
+}/* =========================================================
+   SERVICES — PREMIUM POLISH
+========================================================= */
+
+.service-card {
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(229, 9, 20, 0.4);
+
+    background: #0d0d0d;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(229, 9, 20, 0.06);
+}
+
+.service-number {
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.service-card:hover .service-number {
+    color: #ff1a26;
+    transform: translateX(5px);
+}
+
+.service-card h3 {
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.service-card:hover h3 {
+    transform: translateX(4px);
+    color: #ffffff;
+}
+
+.service-card p {
+    transition: color 0.35s ease;
+}
+
+.service-card:hover p {
+    color: #a7a7a7;
+}
+
+
+/* =========================================================
+   ABOUT — PREMIUM POLISH
+========================================================= */
+
+.about-text p {
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.about-text p:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CONTACT — PREMIUM POLISH
+========================================================= */
+
+.contact-content .section-heading h2 {
+    transition:
+        transform 0.4s ease;
+}
+
+.contact-content .section-heading h2:hover {
+    transform: translateX(5px);
+}
+
+.contact-description {
+    transition: color 0.35s ease;
+}
+
+.contact-description:hover {
+    color: #b5b5b5;
+}
+
+
+/* =========================================================
+   BUTTONS — PREMIUM HOVER
+========================================================= */
+
+.primary-btn,
+.secondary-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn::after,
+.secondary-btn::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.08),
+        transparent
+    );
+
+    transition: left 0.55s ease;
+
+    pointer-events: none;
+}
+
+.primary-btn:hover::after,
+.secondary-btn:hover::after {
+    left: 100%;
+}
+
+
+/* =========================================================
+   NAVBAR — PREMIUM POLISH
+========================================================= */
+
+.navbar {
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.navbar:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 1px;
+
+    background: #e50914;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   FOOTER — PREMIUM POLISH
+========================================================= */
+
+.footer-logo {
+    transition: transform 0.35s ease;
+}
+
+.footer-logo:hover {
+    transform: translateY(-3px);
+}
+
+.footer p {
+    transition: color 0.3s ease;
+}
+
+.footer p:hover {
+    color: #999999;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #e50914;
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-card,
+    .service-number,
+    .service-card h3,
+    .service-card p,
+    .about-text p,
+    .contact-content .section-heading h2,
+    .contact-description,
+    .primary-btn::after,
+    .secondary-btn::after,
+    .navbar,
+    .nav-links a::after,
+    .footer-logo,
+    .footer p,
+    .menu-toggle {
+        transition: none;
+        transform: none;
+    }
+
+}
